@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 
 //const ContenedorSql = require("./managers/contenedorSql");
 //const ContenedorWebsocketSqlite = require("./managers/websocket");
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 //const listaProductos = new ContenedorSql(options.mariaDb, "products");
 const chatWebsocket = new ContenedorSql(options.sqliteDb, "messages");
