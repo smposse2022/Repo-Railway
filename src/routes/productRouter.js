@@ -1,8 +1,8 @@
 import express from "express";
 import { checkAdminRole } from "../middlewares/isAdmin.js";
-import { options } from "../options/mySqulConfig.js";
-import { ContenedorArchivos } from "../managers/contenedorArchivos.js";
-import { ContenedorSql } from "../managers/ContenedorSql.js";
+//import { options } from "../options/mySqulConfig.js";
+//import { ContenedorArchivos } from "../managers/contenedorArchivos.js";
+//import { ContenedorSql } from "../managers/ContenedorSql.js";
 import { ContenedorDaoProductos } from "../daos/index.js";
 
 // products router
