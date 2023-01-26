@@ -10,7 +10,7 @@ let ContenedorDaoProductos;
 let ContenedorDaoCarritos;
 
 //identificador
-let databaseType = "mongo";
+let databaseType = "archivos";
 
 switch (databaseType) {
   case "archivos":
