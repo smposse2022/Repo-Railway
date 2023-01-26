@@ -1,14 +1,14 @@
 import express from "express";
-import { productsRouter } from "./routes/productRouter.js";
-import { cartsRouter } from "./routes/cartRouter.js";
+import { productsRouter } from "./src/routes/productRouter.js";
+import { cartsRouter } from "./src/routes/cartRouter.js";
 import handlebars from "express-handlebars"; // no estoy seguro que esté bien
 import { Server } from "socket.io";
 import mongoose from "mongoose";
-import { ContenedorSql } from "./managers/contenedorSql.js";
-import { options } from "./options/mySqulConfig.js";
+import { ContenedorSql } from "./src/managers/contenedorSql.js";
+import { options } from "./src/options/mySqulConfig.js";
 import { fileURLToPath } from "url";
 import path from "path";
-import { listaProductos } from "./routes/productRouter.js";
+import { listaProductos } from "./src/routes/productRouter.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -32,7 +32,7 @@ const server = app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 
 //configuracion template engine handlebars
 app.engine("handlebars", handlebars.engine());
-app.set("views", __dirname + "/views");
+app.set("views", __dirname + "/src/views");
 app.set("view engine", "handlebars");
 
 // routes
